@@ -2,6 +2,7 @@
 // Program to compute area of a triangle
 
 import kotlin.math.sqrt
+import kotlin.math.abs
 import kotlin.system.exitProcess
 
 
@@ -16,7 +17,8 @@ fun main(args: Array<String>) {
         val b: Double = args[1].toDouble()
         val c: Double = args[2].toDouble()
         val s: Double = 0.5*(a+b+c)
-        val A: Double = kotlin.math.sqrt(s*(s-a)*(s-b)*(s-c))
+        println(s*(s-a)*(s-b)*(s-c))
+        val A: Double = kotlin.math.sqrt(abs(s*(s-a)*(s-b)*(s-c)))
         println("Area = %.5f".format(A))
     }
     exitProcess(0)
